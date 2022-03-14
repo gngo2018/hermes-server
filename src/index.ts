@@ -26,7 +26,7 @@ const io = new Server(http, {
 });
 
 io.on("connection", (socket) => {
-  console.log("a user connected");
+  console.log("A user connected");
   socket.emit('hello', 'Hello from hermes web socket connection')
 
   socket.on('howdy', (arg) => {
@@ -35,5 +35,5 @@ io.on("connection", (socket) => {
 });
 
 http.listen(port, () => {
-  console.log(`Hermes Server running on port ${port}.`);
+  console.log(`Hermes Server running on port ${port} from GitHub CD connection.`);
 });
