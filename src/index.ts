@@ -31,6 +31,7 @@ io.on("connection", (socket) => {
 
   socket.on('howdy', (arg) => {
     console.log('Message from client:', arg)
+    socket.broadcast.emit('chat-response', arg)
   });
 });
 
