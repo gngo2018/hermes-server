@@ -26,7 +26,7 @@ const io = new Server(http, {
 });
 
 io.on("connection", (socket) => {
-  console.log("A user connected");
+  console.log("User connected:", + socket.id);
   socket.emit('hello', 'Hello from hermes web socket connection')
 
   socket.on('howdy', (arg) => {
